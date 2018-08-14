@@ -12,13 +12,13 @@ class Student
       @db = db
     end
 
-    def self.create_table
-      sql = DB[:conn].execute('CREATE TABLE students (id INTEGER PRIMARY KEY, name TEXT, grade VARCHAR);')
-    end
-
-    def self.drop_table
-      sql = DB[:conn].execute('DROP TABLE IF EXISTS students;')
-    end
+    # def self.create_table
+    #   sql = DB[:conn].execute('CREATE TABLE students (id INTEGER PRIMARY KEY, name TEXT, grade VARCHAR);')
+    # end
+    # 
+    # def self.drop_table
+    #   sql = DB[:conn].execute('DROP TABLE IF EXISTS students;')
+    # end
 
     def save
 
