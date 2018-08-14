@@ -25,6 +25,7 @@ class Student
 
       value = DB[:conn].execute("SELECT id FROM students ORDER BY ID DESC LIMIT 1;").flatten
       @id = value[0][0]
+      binding.pry
       # INSERT INTO Student name, grade VALUES (?, ?)
     # DB[:conn].execute(sql, self.name, self.album)
 end
@@ -35,7 +36,7 @@ end
       # student.sql = DB[:conn].execute('SELECT * FROM students ORDER BY ID DESC LIMIT 1')
 students.delete("")
 students = DB[:conn].execute("SELECT * FROM students ORDER BY ID DESC LIMIT 1;").flatten
-binding.pry
+
 return students.to_a.last
 # return
 
