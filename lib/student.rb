@@ -13,6 +13,7 @@ class Student
     end
 
     def self.create_table
+            binding.pry
       sql = DB[:conn].execute('CREATE TABLE students (id INTEGER PRIMARY KEY, name TEXT, grade VARCHAR);')
     end
 
@@ -25,7 +26,7 @@ class Student
 
       value = DB[:conn].execute("SELECT id FROM students ORDER BY ID DESC LIMIT 1;").flatten
       @id = value[0][0]
-      binding.pry
+
       # INSERT INTO Student name, grade VALUES (?, ?)
     # DB[:conn].execute(sql, self.name, self.album)
 end
