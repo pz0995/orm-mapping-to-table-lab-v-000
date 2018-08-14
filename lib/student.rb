@@ -35,7 +35,7 @@ end
   #     return students
       # student.sql = DB[:conn].execute('SELECT * FROM students ORDER BY ID DESC LIMIT 1')
 
-students = DB[:conn].execute("SELECT * FROM students ORDER BY ID DESC LIMIT 1;").flatten
+students = DB[:conn].execute("SELECT * FROM students ORDER BY ID DESC LIMIT 1;")
 return students.to_a.last
 # return
 
