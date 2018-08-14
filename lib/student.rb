@@ -32,11 +32,10 @@ end
 
   #     students = Student.new(id: id, name: name, grade: grade)
   # id = students[0]
-  #     return students
       # student.sql = DB[:conn].execute('SELECT * FROM students ORDER BY ID DESC LIMIT 1')
 
 students = DB[:conn].execute("SELECT * FROM students ORDER BY ID DESC LIMIT 1;").flatten
-
+students.chomp
 return students.to_a.last
 # return
 
